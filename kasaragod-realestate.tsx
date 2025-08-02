@@ -96,67 +96,68 @@ export default function Component() {
 
       <main className="flex-1">
         {/* Enhanced Hero Section */}
-        <section id="hero" className="w-full min-h-screen flex items-center bg-gradient-to-br from-green-50 via-blue-50 to-emerald-50 relative overflow-hidden">
+        <section id="hero" className="w-full min-h-screen flex items-center bg-gradient-to-br from-green-50 via-blue-50 to-emerald-50 relative overflow-hidden pt-16">
           {/* Animated Background Elements */}
           <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-green-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
-            <div className="absolute top-40 right-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
-            <div className="absolute bottom-20 left-20 w-72 h-72 bg-emerald-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
+            <div className="absolute top-20 left-10 w-32 h-32 sm:w-72 sm:h-72 bg-green-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob"></div>
+            <div className="absolute top-40 right-10 w-32 h-32 sm:w-72 sm:h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
+            <div className="absolute bottom-20 left-20 w-32 h-32 sm:w-72 sm:h-72 bg-emerald-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
           </div>
 
-          <div className="container px-4 md:px-6 relative z-10">
+          <div className="container px-4 md:px-6 relative z-10 py-8 md:py-12">
             <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
-              <div className="flex flex-col justify-center space-y-6 text-center lg:text-left">
-                <div className="space-y-4">
+              <div className="flex flex-col justify-center space-y-4 md:space-y-6 text-center lg:text-left order-2 lg:order-1">
+                <div className="space-y-3 md:space-y-4">
                   <Badge variant="secondary" className="w-fit mx-auto lg:mx-0 animate-in fade-in slide-in-from-bottom duration-700">
                     <MapPin className="w-3 h-3 mr-1" />
                     Kasaragod, Kerala
                   </Badge>
-                  <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent animate-in fade-in slide-in-from-bottom duration-700 delay-200">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tighter bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent animate-in fade-in slide-in-from-bottom duration-700 delay-200 leading-tight">
                     Your Dream Home in {"God's Own Country"}
                   </h1>
-                  <p className="max-w-[600px] text-gray-600 md:text-xl leading-relaxed mx-auto lg:mx-0 animate-in fade-in slide-in-from-bottom duration-700 delay-400">
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed mx-auto lg:mx-0 animate-in fade-in slide-in-from-bottom duration-700 delay-400 max-w-[600px]">
                     Discover premium properties in Kasaragod - from beachfront villas to hill station retreats. Your
                     trusted local real estate partner with over 15 years of experience.
                   </p>
                 </div>
                 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-in fade-in slide-in-from-bottom duration-700 delay-600">
-                  <Button size="lg" className="bg-green-600 hover:bg-green-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl group">
+                <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start animate-in fade-in slide-in-from-bottom duration-700 delay-600">
+                  <Button size="lg" className="bg-green-600 hover:bg-green-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl group text-sm sm:text-base">
                     View Properties
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
-                  <Button variant="outline" size="lg" className="hover:bg-green-50 transform hover:scale-105 transition-all duration-300 group">
+                  <Button variant="outline" size="lg" className="hover:bg-green-50 transform hover:scale-105 transition-all duration-300 group text-sm sm:text-base">
                     <Play className="mr-2 h-4 w-4" />
                     Virtual Tour
                   </Button>
                 </div>
                 
-                <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm text-gray-600 animate-in fade-in slide-in-from-bottom duration-700 delay-800">
+                <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 md:gap-6 text-xs sm:text-sm text-gray-600 animate-in fade-in slide-in-from-bottom duration-700 delay-800">
                   <div className="flex items-center gap-2">
                     <div className="flex">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                        <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 fill-yellow-400 text-yellow-400" />
                       ))}
                     </div>
                     <span className="font-medium">4.8/5</span>
-                    <span>(200+ reviews)</span>
+                    <span className="hidden sm:inline">(200+ reviews)</span>
+                    <span className="sm:hidden">(200+)</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Shield className="w-4 h-4 text-green-600" />
+                    <Shield className="w-3 h-3 sm:w-4 sm:h-4 text-green-600" />
                     <span>RERA Certified</span>
                   </div>
                 </div>
               </div>
               
-              <div className="flex items-center justify-center animate-in fade-in slide-in-from-right duration-700 delay-300">
-                <div className="relative group">
+              <div className="flex items-center justify-center animate-in fade-in slide-in-from-right duration-700 delay-300 order-1 lg:order-2">
+                <div className="relative group w-full max-w-md lg:max-w-none">
                   <img
                     src="/heroimage1.jpg"
                     width="600"
                     height="400"
                     alt="Beautiful property in Kasaragod"
-                    className="relative mx-auto aspect-video overflow-hidden rounded-xl object-cover shadow-2xl transform group-hover:scale-105 transition-all duration-500"
+                    className="relative mx-auto aspect-video overflow-hidden rounded-xl object-cover shadow-2xl transform group-hover:scale-105 transition-all duration-500 w-full"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-xl"></div>
                 </div>
